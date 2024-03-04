@@ -53,7 +53,6 @@ class BasicMathOperations():
     #used the calculateSquare method to return the hypotenuse of a right triangle
     def calculateHypotenuse(self, Base, Height):
         return m.sqrt(BasicMathOperations.calculateSquare(Base) + BasicMathOperations.calculateSquare(Height))
-
     #method to return the area of a rectangle
     def AreaRect(self, width, height):
         return width * height 
@@ -65,3 +64,22 @@ class BasicMathOperations():
     #method to return the type of argument
     def TypeOfArgument(self, argument):
         return type(argument)
+    
+def main():
+    #creates an instance of the BasicMathOperations class
+    instance = BasicMathOperations()
+
+    #prints the options
+    print("Here are your options: Greet (click 1) \n Addnumbers (click 2) \n Pick an operation (click 3) \n Return the square (click 4) \n Return the factorial (click 5) \n Counting (click 6) \n Calculate the hypotenuse (click 7) \n Compute the area of a rectangle (click 8) \n Return the power of a number (click 9) \n Return the type of argument (click 10)")
+    #lets the user choose by number
+    choice = int(input(" What option do you pick? "))
+
+    #if the user chooses 1
+    if choice == 1:
+        #gets the necessary arguments from the user
+        name = input("What is your first name? ")
+        lastname = input("What is your last name? ")
+        #passes teh arguments to the Greet method in the BasicMathOperations class
+        print(instance.Greet(name, lastname))
+
+main()
