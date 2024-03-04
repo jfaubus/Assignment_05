@@ -173,4 +173,26 @@ def main():
           except ValueError:
               print("This is not a number, please try again")
 
+
+    #if the user chooses 9
+    elif choice == 9:
+        looping = True
+        while looping:
+          try: 
+              #tries to get the necessary arguments from the user
+              num1 = int(input("What is the base number? "))
+              num2 = int(input("What is the power number? "))
+              looping = False
+              print(instance.PowerOfNumber(num1, num2))
+          except ValueError:
+              print("This is not a number, please try again")
+    #if the user chooses 10
+    elif choice == 10:
+              #doesnt need try/except because it accepts any data type
+              arg = int(input("What is the argument "))
+              print(instance.TypeOfArgument(arg))
+    else:
+        print("That is not one of the options")
+
+
 main()
