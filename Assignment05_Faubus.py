@@ -46,7 +46,7 @@ class BasicMathOperations():
         for i in range(start, end + 1):
             print(i)
 
-    #method to calculate the squar of a number
+    #method to calculate the square of a number
     def calculateSquare(self, num):
         return num**2
     
@@ -60,11 +60,11 @@ class BasicMathOperations():
     
     #method to return the power of a number
     def PowerOfNumber(self, num, power):
-        return num**power
+        return f"{num}^{power} = {num**power}"
     
     #method to return the type of argument
     def TypeOfArgument(self, argument):
-        return type(argument)
+        return f"The type of argument is {type(argument)}"
     
 def main():
     #creates an instance of the BasicMathOperations class
@@ -174,7 +174,6 @@ def main():
           except ValueError:
               print("This is not a number, please try again")
 
-
     #if the user chooses 9
     elif choice == 9:
         looping = True
@@ -190,7 +189,7 @@ def main():
     #if the user chooses 10
     elif choice == 10:
               #doesnt need try/except because it accepts any data type
-              arg = int(input("What is the argument "))
+              arg = input("What is the argument ")
               print(instance.TypeOfArgument(arg))
     else:
         print("That is not one of the options")
