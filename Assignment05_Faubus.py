@@ -53,3 +53,15 @@ class BasicMathOperations():
     #used the calculateSquare method to return the hypotenuse of a right triangle
     def calculateHypotenuse(self, Base, Height):
         return m.sqrt(BasicMathOperations.calculateSquare(Base) + BasicMathOperations.calculateSquare(Height))
+
+    #method to return the area of a rectangle
+    def AreaRect(self, width, height):
+        return width * height 
+    
+    #method to return the power of a number
+    def PowerOfNumber(self, num, power):
+        return num**power
+    
+    #method to return the type of argument
+    def TypeOfArgument(self, argument):
+        return type(argument)
