@@ -81,5 +81,20 @@ def main():
         lastname = input("What is your last name? ")
         #passes teh arguments to the Greet method in the BasicMathOperations class
         print(instance.Greet(name, lastname))
+   #if the user chooses 2
+    elif choice == 2:
+        #loops until the user chooses a valid input
+        looping = True
+        while looping:
+          try: 
+              #tries to get the necessary arguments
+              num1 = int(input("What is the first number you want to add? "))
+              num2 = int(input("What is the second number you want to add? "))
+              looping = False
+              #if successful, calls the Addnumbers() method using the instance
+              print(instance.AddNumbers(num1, num2))
+          #catches a situation where the user doesnt input a valid data type
+          except ValueError:
+              print("This is not a number, please try again")
 
 main()
