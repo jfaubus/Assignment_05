@@ -96,5 +96,34 @@ def main():
           #catches a situation where the user doesnt input a valid data type
           except ValueError:
               print("This is not a number, please try again")
+   #if the user choose 3
+    elif choice == 3:
+        #follows the same structure as the previous elif
+        looping = True
+        while looping:
+          try: 
+            #tries to obtain the necessary arguments
+              num1 = int(input("What is the first number you want to add? "))
+              num2 = int(input("What is the second number you want to add? "))
+              operation = input("what operation would you like (multiply, sum, divide, subtract)")
+              looping = False
+              print(instance.Operations(num1, num2, operation))
+          #catches if the user inputs wrong input for the first two options (the method checks that they put in a valid operation)
+          except ValueError:
+              print("This is not a number, please try again")
+    #if the user chooses 4
+    elif choice == 4:
+        #loops until the user's input is valid
+        looping = True
+        while looping:
+            try:
+                #tries to obtain the right values
+                num1 = input("What number would you like to square")
+                looping = False
+                #prints the output of the BasicMathOperations' square method when num1 is passed to it
+                print(instance.square(num1))
+            #if the user's input is invalid
+            except ValueError:
+                print("That is not a number, please try again ")
 
 main()
