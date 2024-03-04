@@ -28,10 +28,10 @@ class BasicMathOperations():
             print( "the operation was not valid")
             operation = input("Please enter either multiply, divide, sum, or subtract " )
             return f"When you {operation} {num1} and {num2} you get {BasicMathOperations.Operations(self, num1, num2, operation)}"
-        
+    
     #method to return the square of a number
     def square(self, num):
-        return num**2
+        return f"{num} squared is {int(num)**2}"
     
 
     #method to return the factorial of a number
@@ -39,7 +39,7 @@ class BasicMathOperations():
         factori = 1
         for i in range(1, num + 1):
             factori *= i
-        return factori
+        return f"{num}! = {factori}"
     
     #method to count from the specifed first number to the specified second number
     def counting(self, start, end):
