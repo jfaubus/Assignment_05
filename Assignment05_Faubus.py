@@ -26,3 +26,7 @@ class BasicMathOperations():
             print( "the operation was not valid")
             operation = input("Please enter either multiply, divide, sum, or subtract " )
             return BasicMathOperations.Operations(self, num1, num2, operation)
+        
+    #method to return the square of a number
+    def square(self, num):
+        return num**2
