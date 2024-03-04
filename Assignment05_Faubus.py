@@ -125,5 +125,28 @@ def main():
             #if the user's input is invalid
             except ValueError:
                 print("That is not a number, please try again ")
+    #if the user chooses 5
+    elif choice == 5:
+        looping = True
+        while looping:
+            try:
+                #tries to get the necessary arguments from the user
+                num1 = int(input("What number would you like to get the factorial of "))
+                looping = False
+                print(instance.factorial(num1))
+            except ValueError:
+                print("That is not a number, please try again ")
+    #if the user chooses 6
+    elif choice == 6:
+        looping = True
+        while looping:
+          try: 
+              #tries to get the necessary arguments from the user
+              num1 = int(input("What would you like to start the count with "))
+              num2 = int(input("What number would you like to end the count with "))
+              looping = False
+              print(instance.counting(num1, num2))
+          except ValueError:
+              print("This is not a number, please try again")
 
 main()
