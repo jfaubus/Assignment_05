@@ -52,7 +52,8 @@ class BasicMathOperations():
     
     #used the calculateSquare method to return the hypotenuse of a right triangle
     def calculateHypotenuse(self, Base, Height):
-        return m.sqrt(BasicMathOperations.calculateSquare(Base) + BasicMathOperations.calculateSquare(Height))
+        return f"The hypotenuse of a triangle with Base: {Base} and Height: {Height} is {m.sqrt(BasicMathOperations.calculateSquare(self, Base) + BasicMathOperations.calculateSquare(self, Height))}"
+    
     #method to return the area of a rectangle
     def AreaRect(self, width, height):
         return width * height 
@@ -155,7 +156,7 @@ def main():
           try: 
               #tries to get the necessary arguments from the user
               num1 = int(input("What is the length of the base of the right triangle "))
-              num2 = int(input("What is the length of the perpendicular of the right triangle"))
+              num2 = int(input("What is the length of the perpendicular of the right triangle "))
               looping = False
               print(instance.calculateHypotenuse(num1, num2))
           except ValueError:
