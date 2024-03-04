@@ -148,5 +148,29 @@ def main():
               print(instance.counting(num1, num2))
           except ValueError:
               print("This is not a number, please try again")
+    #if the user chooses 7
+    elif choice == 7:
+        looping = True
+        while looping:
+          try: 
+              #tries to get the necessary arguments from the user
+              num1 = int(input("What is the length of the base of the right triangle "))
+              num2 = int(input("What is the length of the perpendicular of the right triangle"))
+              looping = False
+              print(instance.calculateHypotenuse(num1, num2))
+          except ValueError:
+              print("This is not a number, please try again")
+    #if the user chooses 8
+    elif choice == 8:
+        looping = True
+        while looping:
+          try: 
+              #tries to get the necessary arguments from the user
+              num1 = int(input("What is the length of the base of the right triangle "))
+              num2 = int(input("What is the height of the right triangle"))
+              looping = False
+              print(instance.calculateHypotenuse(num1, num2))
+          except ValueError:
+              print("This is not a number, please try again")
 
 main()
