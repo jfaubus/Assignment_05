@@ -56,7 +56,7 @@ class BasicMathOperations():
     
     #method to return the area of a rectangle
     def AreaRect(self, width, height):
-        return width * height 
+        return f"The area of your rectangle: {width} * {height} = {width * height }"
     
     #method to return the power of a number
     def PowerOfNumber(self, num, power):
@@ -167,10 +167,10 @@ def main():
         while looping:
           try: 
               #tries to get the necessary arguments from the user
-              num1 = int(input("What is the length of the base of the right triangle "))
-              num2 = int(input("What is the height of the right triangle"))
+              num1 = int(input("What is the width of the rectangle "))
+              num2 = int(input("What is the height of the rectangle "))
               looping = False
-              print(instance.calculateHypotenuse(num1, num2))
+              print(instance.AreaRect(num1, num2))
           except ValueError:
               print("This is not a number, please try again")
 
