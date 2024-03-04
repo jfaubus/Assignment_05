@@ -1,3 +1,5 @@
+import math as m
+
 #starts the BasicMath Operations class
 class BasicMathOperations():
     #initializer
@@ -47,3 +49,7 @@ class BasicMathOperations():
     #method to calculate the squar of a number
     def calculateSquare(self, num):
         return num**2
+    
+    #used the calculateSquare method to return the hypotenuse of a right triangle
+    def calculateHypotenuse(self, Base, Height):
+        return m.sqrt(BasicMathOperations.calculateSquare(Base) + BasicMathOperations.calculateSquare(Height))
