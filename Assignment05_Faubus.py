@@ -38,3 +38,8 @@ class BasicMathOperations():
         for i in range(1, num + 1):
             factori *= i
         return factori
+    
+    #method to count from the specifed first number to the specified second number
+    def counting(self, start, end):
+        for i in range(start, end + 1):
+            print(i)
