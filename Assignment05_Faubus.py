@@ -43,3 +43,7 @@ class BasicMathOperations():
     def counting(self, start, end):
         for i in range(start, end + 1):
             print(i)
+
+    #method to calculate the squar of a number
+    def calculateSquare(self, num):
+        return num**2
