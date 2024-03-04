@@ -30,3 +30,11 @@ class BasicMathOperations():
     #method to return the square of a number
     def square(self, num):
         return num**2
+    
+
+    #method to return the factorial of a number
+    def factorial(self, num):
+        factori = 1
+        for i in range(1, num + 1):
+            factori *= i
+        return factori
