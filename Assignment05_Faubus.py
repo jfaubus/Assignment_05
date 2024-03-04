@@ -8,26 +8,26 @@ class BasicMathOperations():
 
     #method for greeting someone with their firt and last name
     def Greet(self, first, last):
-        return f"hello, {first} {last}"
+        return f"Hello, {first} {last}"
     
     #method to return the sum of two numbers
     def AddNumbers(self, num1, num2):
-        return int(num1) + int(num2)
+        return f"{num1} + {num2} = {int(num1) + int(num2)}"
     
     #method to perform the operation of the user's choosing
     def Operations(self, num1, num2, operation):
         if operation == "multiply":
-            return num1 * num2
+            return f"{num1} * {num2} = {num1 * num2}"
         elif operation == "divide":
-            return num1 / num2
+            return f"{num1} / {num2} = {num1 / num2}"
         elif operation == "sum":
-            return num1 + num2
+            return f"{num1} + {num2} = {num1 + num2}"
         elif operation == "subtract":
-            return num1 - num2
+            return f"{num1} - {num2} = {num1 - num2}"
         else:
             print( "the operation was not valid")
             operation = input("Please enter either multiply, divide, sum, or subtract " )
-            return BasicMathOperations.Operations(self, num1, num2, operation)
+            return f"When you {operation} {num1} and {num2} you get {BasicMathOperations.Operations(self, num1, num2, operation)}"
         
     #method to return the square of a number
     def square(self, num):
@@ -103,9 +103,9 @@ def main():
         while looping:
           try: 
             #tries to obtain the necessary arguments
-              num1 = int(input("What is the first number you want to add? "))
-              num2 = int(input("What is the second number you want to add? "))
-              operation = input("what operation would you like (multiply, sum, divide, subtract)")
+              num1 = int(input("What is the first number "))
+              num2 = int(input("What is the second number "))
+              operation = input("what operation would you like (multiply, sum, divide, subtract) ")
               looping = False
               print(instance.Operations(num1, num2, operation))
           #catches if the user inputs wrong input for the first two options (the method checks that they put in a valid operation)
@@ -118,7 +118,7 @@ def main():
         while looping:
             try:
                 #tries to obtain the right values
-                num1 = input("What number would you like to square")
+                num1 = input("What number would you like to square ")
                 looping = False
                 #prints the output of the BasicMathOperations' square method when num1 is passed to it
                 print(instance.square(num1))
